@@ -9,9 +9,15 @@ dotenv.config();
 connectDB();
 const app = express();
 
+
+const website =[
+    "https://leads-dashboard-navy.vercel.app/",
+    "http://localhost:5173",
+    "https://vercel.com/9928zaid-gmailcoms-projects/leads-dashboard/LitY3p7kSFot1x5yPDosQzWWRLdk"
+]
 app.use(express.json());
 app.use(cors({
-    origin:"http://localhost:5173"
+    origin:website
 }))
 
 
