@@ -4,9 +4,11 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev":"bun --watch src/server.ts",
-    "build":"bun build src/server.ts --outdir dist",
-    "start":"bun dist/server.js"
+    "build": "bun build src/server.ts --outdir dist --target bun",
+    "dev": "bun --watch src/server.ts",
+    "start": "bun dist/server.js",
+       "seed": "bun src/script/seedlead.ts",
+       "user": "bun src/script/user.ts"
 
   },
   "devDependencies": {
@@ -22,6 +24,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.2.0",
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
